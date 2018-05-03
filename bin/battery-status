@@ -15,19 +15,19 @@ time_left=$(echo $battstat |
 
 if [[ $(pmset -g ac) == *"No adapter attached."* ]]
 then
-  emoji='🔋'
+  emoji="%2{🔋% %}"
 else
-  emoji='🔌'
+  emoji="%2{🔌% %}"
 fi
 
 if [[ $time_left == *"(no"* || $time_left == *"not"* ]]
 then
-  time_left='⌛️ '
+  time_left="%2{⌛️% %}"
 fi
 
 if [[ $time_left == *"0:00"* ]]
 then
-  time_left='⚡️ '
+  time_left="%2{⚡️% %}"
 fi
 
-printf "\033[1;92m$emoji $time_left \033[0m"
+echo "$emoji $time_left "
