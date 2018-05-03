@@ -8,6 +8,28 @@ autoload -U $ZSH/functions/*(:t)
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+ZSH_COMPDUMP=~/.zcompdump
+setopt appendhistory autocd beep extendedglob nomatch notify
+zstyle :compinstall filename '~/.zshrc'
+
+ZSH_THEME="robbyrussell"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+
+plugins=(
+  git
+  gitfast
+  bundler
+  brew
+  rails
+  rake
+  ruby
+  command-not-found
+  gem
+  redis-cli
+  chruby
+  dotenv
+)
 
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
@@ -31,6 +53,7 @@ setopt HIST_REDUCE_BLANKS
 #   like: git comm-[tab]
 setopt complete_aliases
 
+bindkey -v
 bindkey '^[^[[D' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[[5D' beginning-of-line
