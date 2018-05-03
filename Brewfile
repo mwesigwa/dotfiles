@@ -19,7 +19,6 @@ brew 'wget'
 brew 'yarn'
 brew 'youtube-dl'
 
-cask 'adium'
 cask 'google-chrome'
 cask 'macpass'
 cask 'slack'
