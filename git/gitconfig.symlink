@@ -5,9 +5,9 @@
   cleanup = !git branch --merged | grep  -v '\\*\\|master\\|boss\\|develop' | xargs -n 1 git branch -d
   shas = log --pretty=format:\"%H\"
   hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
-  promote = !$ZSH/bin/git-promote
-  wtf     = !$ZSH/bin/git-wtf
-  rank    = !$ZSH/bin/git-rank-contributors
+  promote = !$ZSH_CONFIG/bin/git-promote
+  wtf     = !$ZSH_CONFIG/bin/git-wtf
+  rank    = !$ZSH_CONFIG/bin/git-rank-contributors
 [color]
   ui = true
   whitespace = red reverse

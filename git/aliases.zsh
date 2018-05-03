@@ -1,5 +1,5 @@
 # The rest of my fun git aliases
-alias co="git co"
+alias co="gco"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
 # Remove `+` and `-` from start of diff lines; just rely upon color.
