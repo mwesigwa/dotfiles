@@ -1,0 +1,11 @@
+Host heroku
+  Hostname heroku.com
+  User git
+  IdentitiesOnly yes
+
+Host *
+  Compression yes
+  CompressionLevel 7
+  Cipher blowfish-cbc
+  ServerAliveInterval 600
+  ForwardAgent yes
