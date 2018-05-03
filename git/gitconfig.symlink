@@ -1,3 +1,5 @@
+[include]
+  path = ~/.gitconfig.local
 [alias]
   cleanup = !git branch --merged | grep  -v '\\*\\|master\\|boss\\|develop' | xargs -n 1 git branch -d
   shas = log --pretty=format:\"%H\"
