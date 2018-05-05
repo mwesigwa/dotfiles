@@ -36,6 +36,12 @@ if exists('+colorcolumn')
   autocmd FileType haml setlocal cc=90
 endif
 
+filetype plugin indent on
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
