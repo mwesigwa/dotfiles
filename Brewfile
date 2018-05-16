@@ -1,7 +1,6 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'puma/puma'
 
 brew 'ack'
 brew 'chruby'
@@ -12,7 +11,6 @@ brew 'libgit2'
 brew 'node'
 brew 'openssl'
 brew 'postgresql'
-brew 'puma/puma/puma-dev'
 brew 'ruby-install'
 brew 'roundup'
 brew 'unrar'
