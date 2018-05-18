@@ -11,7 +11,7 @@
 \timing
 
 \set HISTSIZE 2000
-\set HISTFILE ~/.psql_history- :HOST - :DBNAME
+\set HISTFILE ~/.psql_history- :DBNAME
 
 \x auto
 

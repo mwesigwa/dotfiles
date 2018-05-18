@@ -4,6 +4,7 @@ Host heroku
   IdentitiesOnly yes
 
 Host *
+  User cmwesigwa
   Compression yes
   CompressionLevel 7
   Cipher blowfish-cbc

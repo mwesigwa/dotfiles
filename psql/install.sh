@@ -12,11 +12,14 @@ fi
 
 if [ -f /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist ];
 then
-  echo "Setting up postgres autostart for you."
-  ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+  if [ ! -f ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist ];
+  then
+    echo "Setting up postgres autostart for you."
+    ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
-  echo "Run '/usr/local/Cellar/postgresql/<version>/bin/createuser -s postgres' to install postgres user"
+    echo "Run '/usr/local/Cellar/postgresql/<version>/bin/createuser -s postgres' to install postgres user"
+  fi
 fi
 
 exit 0
