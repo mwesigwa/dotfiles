@@ -10,3 +10,5 @@ Host *
   Cipher blowfish-cbc
   ServerAliveInterval 600
   ForwardAgent yes
+  AddKeysToAgent yes
+  UseKeychain yes
