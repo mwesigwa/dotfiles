@@ -6,7 +6,6 @@ Host heroku
 Host *
   User cmwesigwa
   Compression yes
-  CompressionLevel 7
   Cipher blowfish-cbc
   ServerAliveInterval 600
   ForwardAgent yes
