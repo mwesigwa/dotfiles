@@ -2,4 +2,16 @@ Pry.editor="vim"
 Pry::Commands.block_command('enable-pry', 'Enable `binding.pry` feature') do
     ENV['DISABLE_PRY'] = nil
 end
+
+if defined? Rails
+  if Rails.env.production?
+    displayed_env = Pry::Helpers::Text.bold(displayed_env.upcase)
+  end
+
+  displayed_env = Pry::Helpers::Text.send(color_map[Rails.env], displayed_env)
+
+  app_name = Rails.application.class.parent.name.downcase
+
+  Pry.config.prompt = proc { |obj, nest_level, _| "[#{app_name}:#{displayed_env}] #{obj}:#{nest_level}> " }
+end
 Pry.config.history.file = ".pry_history"

@@ -18,3 +18,4 @@
 --ignore-dir=sql
 --ignore-dir=public
 --ignore-dir=loans_to_export
+--ignore-file=match:/.pry_history/

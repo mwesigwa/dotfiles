@@ -12,6 +12,7 @@
 
 \set HISTSIZE 2000
 \set HISTFILE ~/.psql_history- :DBNAME
+\set HISTCONTROL ignoredups
 
 \x auto
 
