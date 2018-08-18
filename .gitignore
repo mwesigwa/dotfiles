@@ -12,3 +12,4 @@ atom.symlink/recovery
 git/gitconfig.local.symlink
 ssh.symlink/known_hosts
 ssh.symlink/id*
+ssh.symlink/ff_id*

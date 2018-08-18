@@ -23,9 +23,11 @@ brew 'xclip'
 brew 'yarn'
 brew 'zsh'
 
+cask 'dbeaver-community'
 cask 'dropbox'
 cask 'google-chrome'
 cask 'macpass'
 cask 'slack'
 cask 'iterm2'
 cask 'xquartz'
+

@@ -3,6 +3,21 @@ Host heroku
   User git
   IdentitiesOnly yes
 
+Host integration
+  Hostname environment01.integration.fflc.eu
+  IdentityFile ~/.ssh/ff_id_rsa
+  IdentitiesOnly yes
+
+Host qa
+  Hostname environment01.qa.fflc.eu
+  IdentityFile ~/.ssh/ff_id_rsa
+  IdentitiesOnly yes
+
+Host prod
+  Hostname support01.prod.fflc.eu
+  IdentityFile ~/.ssh/ff_id_rsa
+  IdentitiesOnly yes
+
 Host *
   User cmwesigwa
   Compression yes
