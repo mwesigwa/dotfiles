@@ -1,6 +1,15 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
+tap 'heroku/brew'
+
+cask 'dbeaver-community'
+cask 'dropbox'
+cask 'google-chrome'
+cask 'macpass'
+cask 'slack'
+cask 'iterm2'
+cask 'xquartz'
 
 brew 'ack'
 brew 'chruby'
@@ -22,12 +31,4 @@ brew 'wget'
 brew 'xclip'
 brew 'yarn'
 brew 'zsh'
-
-cask 'dbeaver-community'
-cask 'dropbox'
-cask 'google-chrome'
-cask 'macpass'
-cask 'slack'
-cask 'iterm2'
-cask 'xquartz'
 
