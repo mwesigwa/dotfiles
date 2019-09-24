@@ -12,6 +12,7 @@ then
   reload!
   perlbrew install-cpanm
   cpanm TAP::Parser::SourceHandler::pgTAP
+  perlbrew install perl-5.30.0
 fi
 
 exit 0
