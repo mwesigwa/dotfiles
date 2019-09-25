@@ -71,3 +71,5 @@ nnoremap <leader>n :set norelativenumber!<CR>:set nonumber!<CR>
 nnoremap <leader>N :set relativenumber<CR>
 nnoremap <leader>P :set paste<CR>
 nnoremap <leader>p :set nopaste<CR>
+
+highlight CursorLineNr cterm=bold

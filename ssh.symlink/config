@@ -19,7 +19,7 @@ Host prod
   IdentitiesOnly yes
 
 Host *
-  User cmwesigwa
+  User calvin
   Compression yes
   Cipher blowfish-cbc
   ServerAliveInterval 600
