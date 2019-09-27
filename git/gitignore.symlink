@@ -56,3 +56,5 @@ Desktop/
 .oracle_jre_usage/
 Public/
 Software/
+packer
+terraform
