@@ -7,3 +7,10 @@ alias gac='git add -A && git commit -m'
 alias ge='git-edit-new'
 alias gs='git status'
 alias grb='git rebase --committer-date-is-author-date'
+
+# checks for any files flagged w/ --skip-worktree alias
+alias check="git ls-files -v|grep '^S'"
+# add --skip-worktree flag to file
+alias skip() {  git update-index --skip-worktree "$@";  git status; }
+# remove --skip-worktree flag from file
+alias unskip() {  git update-index --no-skip-worktree "$@";  git status; }

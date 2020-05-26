@@ -3,7 +3,7 @@ vendor/
 log/
 tmp/
 tags
-.DS_Store
+*.DS_Store
 *~
 *.swp
 .rbenv-gemsets
