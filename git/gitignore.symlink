@@ -13,6 +13,7 @@ add_mocks
 reset_mocks
 prodder.yml
 .env
+.env.development
 .pry_history
 .viminfo
 .Private
@@ -58,3 +59,4 @@ Public/
 Software/
 packer
 terraform
+.ruby-version

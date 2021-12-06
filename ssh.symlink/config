@@ -26,3 +26,6 @@ Host *
   ForwardAgent yes
   AddKeysToAgent yes
   UseKeychain yes
+  IdentitiesOnly yes
+  StrictHostKeyChecking no
+  UserKnownHostsFile=/dev/null
