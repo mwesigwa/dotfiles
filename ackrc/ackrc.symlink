@@ -21,3 +21,4 @@
 --ignore-dir=storage
 --ignore-dir=.nyc_output
 --ignore-file=match:/.pry_history/
+--ignore-file=ext:dump
