@@ -6,3 +6,4 @@ full_path=$(realpath $0)
 dir_path=$(dirname $full_path)
 
 printf "$(heroku autocomplete:script zsh)" > "$dir_path/completion.zsh"
+chmod +x "$dir_path/completion.zsh"
