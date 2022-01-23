@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'elastic/tap'
 tap 'homebrew/bundle'
 tap 'heroku/brew'
 
@@ -9,14 +8,11 @@ cask 'google-chrome'
 cask 'iterm2'
 cask 'macpass'
 cask 'slack'
-cask 'xquartz'
 
 brew 'ack'
 brew 'chruby'
 brew 'coreutils'
-brew 'elastic/tap/elasticsearch-full'
 brew 'gh'
-brew 'gpgme'
 brew 'grc'
 brew 'heroku'
 brew 'htop'
