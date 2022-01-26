@@ -10,15 +10,15 @@ then
   mkdir -p ~/Library/LaunchAgents
 fi
 
-if [ -f /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist ];
+if [ -f "$(brew --prefix)/opt/postgresql/homebrew.mxcl.postgresql.plist" ];
 then
   if [ ! -f ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist ];
   then
     echo "Setting up postgres autostart for you."
-    ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+    ln -sfv $(brew --prefix)/opt/postgresql/homebrew.mxcl.postgresql.plist ~/Library/LaunchAgents
     launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 
-    echo "Run '/usr/local/Cellar/postgresql/<version>/bin/createuser -s postgres' to install postgres user"
+    echo "Run '$(brew --prefix)/Cellar/postgresql/<version>/bin/createuser -s postgres' to install postgres user"
   fi
 fi
 

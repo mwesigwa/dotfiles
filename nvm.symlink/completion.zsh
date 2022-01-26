@@ -1,1 +1,1 @@
-  source /usr/local/opt/nvm/nvm.sh
+source "$(brew --prefix)/opt/nvm/nvm.sh"
