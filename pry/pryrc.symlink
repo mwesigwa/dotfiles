@@ -3,15 +3,22 @@ Pry::Commands.block_command('enable-pry', 'Enable `binding.pry` feature') do
     ENV['DISABLE_PRY'] = nil
 end
 
+color_map = {
+  'development' => 'cyan',
+  'staging' => 'orange',
+  'production' => 'bold'
+}
+
 if defined? Rails
-  if Rails.env.production?
-    displayed_env = Pry::Helpers::Text.bold(displayed_env.upcase)
-  end
+  env = Rails.env.upcase
+  displayed_env = Pry::Helpers::Text.send(color_map[Rails.env], env)
 
-  displayed_env = Pry::Helpers::Text.send(color_map[Rails.env], displayed_env)
-
-  app_name = Rails.application.class.parent.name.downcase
-
-  Pry.config.prompt = proc { |obj, nest_level, _| "[#{app_name}:#{displayed_env}] #{obj}:#{nest_level}> " }
+  app_name = Pry::Helpers::Text.magenta(Rails.application.class.module_parent_name)
+  Pry.config.prompt = Pry::Prompt.new(
+    "custom",
+    "my custom prompt",
+    [proc { |obj, nest_level, _| "[#{app_name}:#{displayed_env}] #{obj}:#{nest_level}> " }]
+  )
 end
-Pry.config.history.file = ".pry_history"
+
+Pry.config.history_file = "./.pry_history"
