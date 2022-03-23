@@ -20,5 +20,7 @@
 --ignore-dir=loans_to_export
 --ignore-dir=storage
 --ignore-dir=.nyc_output
+--ignore-dir=app/static
 --ignore-file=match:/.pry_history/
+--ignore-file=match:/.eslintcache/
 --ignore-file=ext:dump

@@ -1,0 +1,6 @@
+[submodule "janus/janus.symlink/typescript-vim"]
+	path = janus/janus.symlink/typescript-vim
+	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "janus/janus.symlink/vim-jsx-pretty"]
+	path = janus/janus.symlink/vim-jsx-pretty
+	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
