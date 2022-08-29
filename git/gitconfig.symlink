@@ -1,7 +1,7 @@
 [include]
   path = ~/.gitconfig.local
 [alias]
-  cleanup = !git branch --merged | grep  -v '\\*\\|master\\|boss\\|develop\\|qa\\|integration' | xargs -n 1 git branch -d
+  cleanup = !git branch --merged | grep  -v '\\*\\|master\\|main\\|boss\\|develop\\|qa\\|integration' | xargs -n 1 git branch -d
   shas = log --pretty=format:\"%H\"
   hist = log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short
   promote = !$ZSH_CONFIG/bin/git-promote

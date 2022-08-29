@@ -9,11 +9,13 @@
 --type-set=plain_text=.txt
 --type-set=comma_separated_values=.csv
 --ignore-dir=coverage
+--ignore-dir=assets
 --ignore-dir=tmp
 --ignore-dir=log
 --ignore-dir=doc
 --ignore-dir=real_loans
 --ignore-dir=vendor
+--ignore-dir=node_modules
 --ignore-dir=exported_loans
 --ignore-dir=sql
 --ignore-dir=public
@@ -24,3 +26,6 @@
 --ignore-file=match:/.pry_history/
 --ignore-file=match:/.eslintcache/
 --ignore-file=ext:dump
+--ignore-dir=sorbet
+--ignore-dir=.rubocop
+--ignore-dir=dev/bashmatic
