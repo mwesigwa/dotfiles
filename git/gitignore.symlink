@@ -1,5 +1,4 @@
 bin/
-vendor/
 log/
 tmp/
 tags
@@ -8,7 +7,6 @@ tags
 *.swp
 .rbenv-gemsets
 .ruby-version
-/test
 add_mocks
 reset_mocks
 prodder.yml
@@ -60,3 +58,4 @@ Software/
 packer
 terraform
 .ruby-version
+TODOs

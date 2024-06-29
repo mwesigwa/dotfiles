@@ -3,14 +3,25 @@ Pry::Commands.block_command('enable-pry', 'Enable `binding.pry` feature') do
     ENV['DISABLE_PRY'] = nil
 end
 
+Pry::Commands.block_command('factories', 'Enable factorybot factories') do
+  Object.include FactoryBot::Syntax::Methods
+  if (require(Dir.pwd + '/spec/helpers/factory_helpers.rb'))
+    Object.include FactoryHelpers
+    FactoryBot::SyntaxRunner.send(:include, FactoryHelpers)
+  end
+end
+
 color_map = {
   'development' => 'cyan',
   'staging' => 'orange',
   'production' => 'bold'
 }
 
+Pry.config.history_file = "./.pry_history"
+
 if defined? Rails
   env = Rails.env.upcase
+  Pry.config.history_file = "./.pry_history.#{env}"
   displayed_env = Pry::Helpers::Text.send(color_map[Rails.env], env)
 
   app_name = Pry::Helpers::Text.magenta(Rails.application.class.module_parent_name)
@@ -19,6 +30,12 @@ if defined? Rails
     "my custom prompt",
     [proc { |obj, nest_level, _| "[#{app_name}:#{displayed_env}] #{obj}:#{nest_level}> " }]
   )
+
+  if Rails.env.development?
+    Pry.run_command 'factories'
+  end
 end
 
-Pry.config.history_file = "./.pry_history"
+Pry.commands.alias_command 'c', 'continue'
+Pry.commands.alias_command 's', 'step'
+Pry.commands.alias_command 'n', 'next'

@@ -2,6 +2,7 @@
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
+export ZSH_CONFIG=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/Software

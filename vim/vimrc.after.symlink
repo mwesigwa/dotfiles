@@ -72,6 +72,7 @@ nnoremap <leader>n :set norelativenumber!<CR>:set nonumber!<CR>
 nnoremap <leader>N :set relativenumber<CR>
 nnoremap <leader>P :set paste<CR>
 nnoremap <leader>p :set nopaste<CR>
+nnoremap <leader>g :GitGutterToggle<CR>
 
 highlight CursorLineNr cterm=bold
 highlight def link jsxTagName Operator
